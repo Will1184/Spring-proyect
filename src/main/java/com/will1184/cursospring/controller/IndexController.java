@@ -12,13 +12,13 @@ import java.util.Arrays;
 import java.util.List;
 
 @Controller
-@RequestMapping("/cursosspring")
+    @RequestMapping("/cursosspring")
 public class IndexController {
-    @Value("Hola Spring Framework Con model desde Properties!")
+    @Value("${texto.indexcontroller.index.titulo}")
     private  String textoIndex;
-    @Value("Perfil del usuario")
+    @Value("${texto.indexcontroller.perfil.titulo}")
     private String textoPerfil;
-    @Value("Listado de usuario desde textos.properties")
+    @Value("${texto.indexcontroller.listar.titulo}")
     private String textoListar;
 
     @GetMapping({"index","/","home"})
